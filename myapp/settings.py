@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "request_app.apps.RequestAppConfig"
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -75,8 +76,10 @@ WSGI_APPLICATION = "myapp.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.myspl",
+        "NAME": "request_db" ,
+        "USER":"root",
+        "PASSWORD":"root"
     }
 }
 
