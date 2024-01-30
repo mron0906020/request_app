@@ -8,10 +8,13 @@
 </head>
 
 <body>
-    <h2>{{weather_date}}{{weather_title}}</h2>
-    <p>{{weather_forecasts.0.telop}}</p>
-    <p>最高気温…{{weather_forecasts.0.temperature.max.celsius}}</p>
-    <p>最低気温…{{weather_forecasts.0.temperature.min.celsius}}</p>
+    <h2>{{weather.weather_title}}</h2>
+    <p>{{weather.weather_date}}の天気…{{weather.weather_telop}}</p>
+    <div>{{weather.weather_image|safe}}</div>
+    <p>最高気温…{{weather.weather_max}}</p>
+    <p>最低気温…{{weather.weather_min}}</p>
+    <a href='{% url "request:index" %}'>地域選択に戻る</a>
+
 
 </body>
 

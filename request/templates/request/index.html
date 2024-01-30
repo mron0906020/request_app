@@ -8,6 +8,9 @@
 </head>
 
 <body>
+    <h1>Weather Information</h1>
+    <h2>地域を選択</h2>
+
     <form action="{% url 'request:detail' %}" method="POST">
         {% csrf_token %}
         <select name="location">
